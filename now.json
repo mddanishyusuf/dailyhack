@@ -1,4 +1,7 @@
 {
     "version": 2,
-    "builds": [{ "src": "package.json", "use": "@now/next" }]
+    "builds": [{ "src": "package.json", "use": "@now/next" }],
+    "routes": [
+        { "src": "/post/(?<slug>[a-z-]+-)(?<id>[0-9]+)", "dest": "/post?number=$number&slug=$slug" }
+    ]
 }
