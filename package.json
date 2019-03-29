@@ -22,7 +22,8 @@
     "now": "^14.2.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "speakingurl": "^14.0.1"
+    "speakingurl": "^14.0.1",
+    "styled-jsx": "^3.2.1"
   },
   "devDependencies": {
     "dotenv": "^7.0.0"
