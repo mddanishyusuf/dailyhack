@@ -12,13 +12,19 @@ app
 
         server.get('/post/:slug', (req, res) => {
             const actualPage = '/post'
+            // let paramArray = req.params.slug.split('-')
+            // let number = paramArray.splice(paramArray.length-1,1).join('-')
 
-            paramArray = req.params.slug.split('-')
-            let number = paramArray.splice(paramArray.length-1,1).join('-')
+            // let slugArray = req.params.slug.split('-');
+            // slugArray.splice(slugArray.length-1,1)
+            // let slug = slugArray.join('-')
 
-            slugArray = req.params.slug.split('-');
-            slugArray.splice(slugArray.length-1,1)
-            let slug = slugArray.join('-')
+
+            var slugArray = req.params.slug.split('-')
+
+            const [number] = slugArray.slice(-1)
+            slugArray.splice(-1,1)
+            const slug = slugArray.join('-')
             
             const queryParams = { number, slug }
             app.render(req, res, actualPage, queryParams)

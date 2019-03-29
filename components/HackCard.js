@@ -4,7 +4,7 @@ const HackCard = (props) => {
     const issue = props.single_issue
     return (
         <div>
-            {issue.body}
+            <Markdown>{issue.body}</Markdown>
         </div>
     )
 }
