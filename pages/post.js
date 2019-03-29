@@ -6,7 +6,18 @@ import HackCard from '../components/HackCard'
 
 const SinglePost = withRouter(props => (
     <Layout title={props.single_issue.title}>
-        <HackCard {...props}/>
+        <div className="single-post">
+            <HackCard {...props}/>
+        </div>
+        <style>
+            {`
+                .single-post {
+                    width: 80%;
+                    margin: 0px auto;
+                    font-family: 'Questrial', sans-serif;
+                }
+            `}
+        </style>
     </Layout>
 ))
 

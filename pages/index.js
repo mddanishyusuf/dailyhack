@@ -1,18 +1,30 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import fetch from 'isomorphic-unfetch';
-import Link from 'next/link';
-import getSlug from 'speakingurl'
 
 import Layout from '../components/Layout';
+import HackCard from '../components/HackCard';
 
 function HackComponent(props){
     return (
-       <div>
+       <div className="main-container">
            {props.dailyhacks.map(hack => (
-               <div key={hack.id}>
-                    <Link as={`/post/${[getSlug(hack.title),hack.number].join('-')}`} href={`/post?number=${hack.number}&slug=${[getSlug(hack.title)]}`}><a>{hack.title}</a></Link>
+               <div key={hack.id} className="hack-list">
+                    <HackCard single_issue={hack}/>
                </div>
            ))}
+           <style jsx>{`
+               .main-container {
+                   width: 80%;
+                   margin: 0px auto;
+                   font-family: 'Questrial', sans-serif;
+               }
+               .hack-list {
+
+               }
+               p {
+                   line-height: 1.8
+               }
+           `}</style>
         </div>
     )
 }
