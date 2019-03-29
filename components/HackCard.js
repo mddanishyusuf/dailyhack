@@ -45,8 +45,12 @@ const HackCard = (props) => {
                     }
 
                     .hack-card-meta img {
+                        display: block;
                         width: 40px;
-                        border-radius: 50%;
+                        height: 40px;
+                        background-color: red;
+                        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                        border: 1px solid #d8d8d8
                     }
 
                     .hack-card-content {
