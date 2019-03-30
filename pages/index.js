@@ -3,6 +3,7 @@ import fetch from 'isomorphic-unfetch';
 
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
+import PaginationBox from '../components/PaginationBox';
 
 function HackComponent(props){
     return (
@@ -16,14 +17,7 @@ function HackComponent(props){
                .main-container {
                    width: 80%;
                    margin: 0px auto;
-                   font-family: 'Questrial', sans-serif;
-               }
-               .hack-list {
-
-               }
-               p {
-                   line-height: 1.8
-               }
+               }               
            `}</style>
         </div>
     )
@@ -32,18 +26,30 @@ function HackComponent(props){
 function DailyHackHome(props){
     return(
         <Fragment>
-            <Layout title="Daily Hack: Share your daily hack with others">
+            <Layout title="Daily Hack: A community of Makers and Geeks" {...props}>
                 <HackComponent {...props}/>
+                <PaginationBox {...props}/>
             </Layout>
         </Fragment>
     )
 }
 
-DailyHackHome.getInitialProps = async function(){
-    const result = await fetch(process.env.DAILYHACK_GITHUB_API)
-    const issues = await result.json()
+DailyHackHome.getInitialProps = async function(context){
+    var page_number;
+    var per_page = 5
+    if(context.query.page_number === undefined){
+        page_number = 1
+    }else{
+        page_number = context.query.page_number
+    }
+    const url = process.env.DAILYHACK_GITHUB_API + '/' + page_number + '/' + per_page
+    const result = await fetch(url)
+    const data = await result.json()
     return {
-        dailyhacks: issues
+        dailyhacks: data.issues,
+        page_number: context.query.page_number,
+        total_issues: data.total_issues,
+        active_page: page_number
     }
 }
 

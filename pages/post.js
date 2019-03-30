@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import HackCard from '../components/HackCard'
 
 const SinglePost = withRouter(props => (
-    <Layout title={props.single_issue.title}>
+    <Layout title={props.single_issue.title} {...props}>
         <div className="single-post">
             <HackCard {...props}/>
         </div>

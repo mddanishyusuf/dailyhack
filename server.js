@@ -12,14 +12,6 @@ app
 
         server.get('/post/:slug', (req, res) => {
             const actualPage = '/post'
-            // let paramArray = req.params.slug.split('-')
-            // let number = paramArray.splice(paramArray.length-1,1).join('-')
-
-            // let slugArray = req.params.slug.split('-');
-            // slugArray.splice(slugArray.length-1,1)
-            // let slug = slugArray.join('-')
-
-
             var slugArray = req.params.slug.split('-')
 
             const [number] = slugArray.slice(-1)
@@ -27,6 +19,13 @@ app
             const slug = slugArray.join('-')
             
             const queryParams = { number, slug }
+            app.render(req, res, actualPage, queryParams)
+        })
+
+        server.get('/page/:page_number', (req, res) => {
+            const actualPage = '/index'
+            const page_number = req.params.page_number
+            const queryParams = { page_number }
             app.render(req, res, actualPage, queryParams)
         })
 
