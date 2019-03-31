@@ -26,7 +26,7 @@
 - [How to Add tricks](#-how-to-add-tricks)
 - [How to Contribute](#-how-to-contribute)
 - [Thanks to Our Contributors](#-thanks-to-our-contributors)
-- [License](#-license)
+- [License](#license)
 
 <br/>
 
@@ -36,7 +36,7 @@ DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in 
 
 <br/>
 
-## ✍  How to add tricks
+## ✍ How to add tricks
 
 So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's eassy to add your tricks. Just create an issues and write your hack into editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
 
