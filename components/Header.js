@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { withRouter } from 'next/router'
+
 import AddButton from  './AddButton'
 import { Twitter, GitHub, Users } from 'react-feather';
 
@@ -16,7 +18,7 @@ const Header = (props) => (
             </ul>
         </div>
         </div>
-        {props.pathname === "/" ? 
+        {props.router.pathname === "/" ? 
             <div className="landing-heading">
                 <h2>A community of Makers and Geeks</h2>
                 <p>It's a place where people share there daily hack they use in their developments. So, Do you have any hack?</p>
@@ -84,4 +86,4 @@ const Header = (props) => (
     </div>
 )
 
-export default Header;
+export default withRouter(Header);

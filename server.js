@@ -23,7 +23,7 @@ app
         })
 
         server.get('/page/:page_number', (req, res) => {
-            const actualPage = '/index'
+            const actualPage = '/'
             const page_number = req.params.page_number
             const queryParams = { page_number }
             app.render(req, res, actualPage, queryParams)

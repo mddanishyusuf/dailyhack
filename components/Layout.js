@@ -11,8 +11,7 @@ const Layout = props => (
             <title>{props.title}</title>
             <link href="https://fonts.googleapis.com/css?family=Questrial|Poppins:500" rel="stylesheet"/>
         </Head>
-        <Header {...props.url}/>
-        <body>
+        <Header/>
         {props.children}
         <style jsx global>
             {`
@@ -26,7 +25,6 @@ const Layout = props => (
                 }
             `}
         </style>
-        </body>
     </div>
 )
 
