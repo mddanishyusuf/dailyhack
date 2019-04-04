@@ -1,68 +1,27 @@
-<p align="center">
-  <a href="https://dailyhack.xyz">
-    <img alt="DailyHack" src="https://github.com/mddanishyusuf/dailyhack/raw/master/static/images/DailyHackLogo.png" width="200" />
-  </a>
-</p>
-<h1 align="center">
-  DailyHack
-</h1>
+Welcome to Glitch
+=================
 
-<h3 align="center">
-  💡 :rocket:
-</h3>
-<p align="center">
-  It's a place where people share there daily hacks they use in their developments.<br/>So, Do you have any hack?
-</p>
-<p align="center">
-  <a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/mddanishyusuf/dailyhack.svg?label=Add%20Tricks" alt="Follow @gatsbyjs" />
-  </a>
-</p>
+Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+
+**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+
+Find out more [about Glitch](https://glitch.com/about).
 
 
-## What’s In This Document
+Your Project
+------------
 
-- [About DailyHack](#-about-dailyhack)
-- [How to Add tricks](#-how-to-add-tricks)
-- [How to Contribute](#-how-to-contribute)
-- [Thanks to Our Contributors](#-thanks-to-our-contributors)
-- [License](#license)
+On the front-end,
+- edit `public/client.js`, `public/style.css` and `views/index.html`
+- drag in `assets`, like images or music, to add them to your project
 
-<br/>
+On the back-end,
+- your app starts at `server.js`
+- add frameworks and packages in `package.json`
+- safely store app secrets in `.env` (nobody can see this but you and people you invite)
 
-## 📖 About DailyHack
 
-DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the word. So, anyone can share there methods with the others makers and developers.
+Made by [Glitch](https://glitch.com/)
+-------------------
 
-<br/>
-
-## ✍ How to add tricks
-
-So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's eassy to add your tricks. Just create an issues and write your hack into editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
-
-<br/>
-
-## 🤝 How to Contribute
-
-Adding tricks is a big contribution to the open source community. So, the website is Open Source and the is in this repository. So, you can do whatever you seems that it should be imrovise and need to be changed.
-
-<br/>
-
-### Website Build With
-
-- **Nextjs**- For SSR, Front-end and I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
-- **GitHub Issues:** As a CMS for tricks
-- **Glitch:** An layer on the GitHub API to secure access_token
-- **Zeit:** To host the application
-
-<br/>
-
-## 💜 Thanks to Our Contributors
-
-Thanks to our many contributors and friends those give time to add tricks.
-
-<br/>
-
-## License
-
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+\ ゜o゜)ノ
