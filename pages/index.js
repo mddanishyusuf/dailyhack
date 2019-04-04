@@ -26,7 +26,7 @@ function HackComponent(props){
 function DailyHackHome(props){
     return(
         <Fragment>
-            <Layout title="Daily Hack: A community of Makers and Geeks" {...props}>
+            <Layout title="Daily Hack: A community of Makers and Geeks" description="An community of makers, developers and geeks where they share there daily hack they use in their developments." image="/static/images/daily-hack-image.png" pageUrl="https://dailyhack.mddanishyusuf.now.sh" {...props}>
                 <HackComponent {...props}/>
                 <PaginationBox {...props}/>
             </Layout>

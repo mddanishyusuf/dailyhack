@@ -8,7 +8,7 @@ const Header = (props) => (
     <div>
         <div className="navbar">
         <div className="website-logo">
-            <Link href="/"><a><img src='/static/images/DailyHackLogo.png'/></a></Link>
+            <Link href="/"><a><img src='/static/images/daily-hack-logo.png'/></a></Link>
         </div>
         <div className="right-navbar">
             <ul>

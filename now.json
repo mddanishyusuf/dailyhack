@@ -2,6 +2,7 @@
     "version": 2,
     "builds": [{ "src": "package.json", "use": "@now/next" }],
     "routes": [
-        { "src": "/post/(?<slug>[a-z-]+-)(?<number>[0-9]+)", "dest": "/post?number=$number&slug=$slug" }
+        { "src": "/post/(?<slug>[a-z0-9-_]+-)(?<number>[0-9]+)", "dest": "/post?number=$number&slug=$slug" },
+        { "src": "/page/(?<page_number>[0-9]+)", "dest": "/index?page_number=$page_number" }
     ]
 }
