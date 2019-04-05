@@ -15,9 +15,14 @@ function HackComponent(props){
            ))}
            <style jsx>{`
                .main-container {
-                   width: 80%;
-                   margin: 0px auto;
-               }               
+                    padding: 10px;
+                }   
+               @media screen and (min-width: 700px) {
+                    .main-container {
+                        width: 80%;
+                        margin: 0px auto;
+                    }   
+               }            
            `}</style>
         </div>
     )

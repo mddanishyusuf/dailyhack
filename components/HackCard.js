@@ -1,7 +1,7 @@
 import Markdown from 'markdown-to-jsx';
 import getSlug from 'speakingurl'
 import Link from 'next/link';
-import { Tag, Heart, MessageSquare } from 'react-feather';
+import { Tag, Heart, MessageSquare, Twitter, Facebook } from 'react-feather';
 import moment from 'moment'
 
 const HyperLink = ({ children, ...props }) => (
@@ -15,9 +15,10 @@ const HackCard = (props) => {
             <div className="hack-card">
                 <div className="hack-card-meta">
                     <img src={issue.user.avatar_url} className="author-picture" />
-                    <br/>
-                    <div className="author-name">{issue.user.login}</div>
-                    <div className="created-at">{moment(issue.created_at).fromNow()}</div>
+                    <div className="post-details">
+                        <div className="author-name">{issue.user.login}</div>
+                        <div className="created-at">{moment(issue.created_at).fromNow()}</div>
+                    </div>
                 </div>
                 <div className="hack-card-content">
                     <div className="main-content">
@@ -43,26 +44,41 @@ const HackCard = (props) => {
                                 }): ''}
                             </span>
                             </ul>
+                            
                         </div>
                         {/* <div className="heart footer-meta">
                             <Heart size={18} color={'#4618B1'}/><span>25</span>
                         </div> */}
                         <div className="any-comments footer-meta">
-                            <MessageSquare size={18} color={'#4618B1'}/><a href={issue.html_url} target="_blank"><span>{issue.comments === 0 ? 'any comments?' : issue.comments}</span></a>
+                            <MessageSquare size={18} color={'#4618B1'}/><a href={issue.html_url} target="_blank"><span>{issue.comments === 0 ? 'comment?' : issue.comments}</span></a>
+                            <span>Share:</span> 
+                            <a href={`https://twitter.com/intent/tweet/?text=${encodeURI(issue.title)}&amp;url=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Twitter size={18} color={'#4618B1'}/></a>
+                            <a href={`https://facebook.com/sharer/sharer.php?u=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Facebook size={18} color={'#4618B1'}/></a>
                         </div>
                     </div>
                 </div>
             </div>
             <style>
                 {`
-                    .hack-card-container .hack-card {
-                        display: grid;
-                        grid-template-columns: 150px auto;
-                    }
+                   
 
                     .hack-card-meta {
                         line-height: 1.4;
                         font-size: 0.8rem;
+                    }
+
+                    @media screen and (min-width: 700px) {
+                        .hack-card-meta img {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    @media screen and (max-width: 700px) {
+                        .hack-card-meta {
+                            display: grid;
+                            grid-template-columns: 60px auto;
+                            margin-bottom: 10px;
+                        }
                     }
 
                     .hack-card-meta img {
@@ -114,7 +130,7 @@ const HackCard = (props) => {
 
                     .card-footer {
                         display: grid;
-                        grid-template-columns: auto 150px;
+                        grid-template-columns: auto 180px;
                         font-size: 12px;
                         background-color: #fff;
                         padding: 10px 15px;
@@ -136,8 +152,20 @@ const HackCard = (props) => {
                         display: inline-block;
                         padding: 0px 5px;
                     }
+                    
+                    .any-comments a, .any-comments span{
+                        padding-right: 5px;
+                    }
 
-                    .card-footer .any-comments{
+                    @media screen and (min-width: 700px){
+                        .hack-card-container .hack-card {
+                            display: grid;
+                            grid-template-columns: 150px auto;
+                        }
+                    }
+
+                    @media screen and (max-width: 700px) {
+                        
                     }
                 `}
             </style>

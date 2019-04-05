@@ -2,6 +2,7 @@ import {Fragment} from 'react';
 import Head from 'next/head';
 
 import Header from './Header';
+import Footer from './Footer';
 
 const Layout = props => {
     console.log(props)
@@ -25,13 +26,17 @@ const Layout = props => {
                 <link href="https://fonts.googleapis.com/css?family=Questrial|Poppins:500" rel="stylesheet"/>
             </Head>
             <Header/>
-            {props.children}
+            <div className="main">{props.children}</div>
+            <Footer />
             <style jsx global>
                 {`
                     body {
-                        padding: 0 !imporatnt;
+                        padding: 0 !important;
                         font-family: 'Questrial', sans-serif;
                         margin: 0;
+                    }
+                    .main {
+                        min-height: 700px !important;
                     }
                     p {
                         line-height: 1.8

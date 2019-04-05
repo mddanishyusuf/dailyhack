@@ -5,7 +5,7 @@ const AddButton = () => (
     <div style={{textAlign: 'center'}}>
         <div className="right-navbar">
             <ul>
-                <li><a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank"><PlusSquare color={'#4618B1'} size={18} /> <span>Any Tricks?</span></a></li>
+                <li><a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank"><PlusSquare color={'#4618B1'} size={18} /> <span>any trick?</span></a></li>
             </ul>
         </div>
         <style jsx>
@@ -17,7 +17,6 @@ const AddButton = () => (
                     margin: 0 0 80px 0px;
                     border-radius: 4px;
                     color: #24292e;
-                    border: 1px solid rgba(27,31,35,.2);
                 }
 
                 .right-navbar ul li{
@@ -25,14 +24,16 @@ const AddButton = () => (
                     -moz-box-align: center;
                     align-items: center;
                     list-style: none;
-                    padding: 8px 15px;
-                    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
                 }
 
                 .right-navbar ul li a{
                     display: flex;
                     text-decoration: none;
-                    color: #707070
+                    padding: 5px 15px;
+                    border: 2px solid #707070;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    background-color: #C37501AD;
                 }
 
                 .right-navbar ul li span {

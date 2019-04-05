@@ -6,7 +6,6 @@ function PaginationBox(props){
     const paginationArray = Array.from(Array(numberOfPages).keys())
     return(
         <div className="pagination">
-        {activePage}
             <ul>
                 {paginationArray.map(number => {
                     return(

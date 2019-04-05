@@ -15,9 +15,14 @@ const SinglePost = withRouter(props => {
             <style>
                 {`
                     .single-post {
-                        width: 80%;
-                        margin: 0px auto;
-                    }
+                        padding: 10px;
+                    } 
+                    @media screen and (min-width: 700px) {
+                         .single-post {
+                             width: 80%;
+                             margin: 0px auto;
+                         }   
+                    }   
                 `}
             </style>
         </Layout>

@@ -47,6 +47,7 @@ const Header = (props) => {console.log(props.router)
 
                 .landing-heading h2 {
                     margin: 0;
+                    padding: 0px 40px;
                     font-family: 'Poppins', sans-serif;
                     font-weight: 500;
                     font-size: 40px;
@@ -75,12 +76,40 @@ const Header = (props) => {console.log(props.router)
                 .right-navbar ul li a{
                     display: flex;
                     text-decoration: none;
-                    color: #707070
+                    color: #707070;
+                    font-size: 0.9rem;
                 }
 
 
                 .right-navbar ul li span {
                     padding: 0px 5px;
+                }
+
+                @media screen and (max-width: 700px) {
+                    .navbar {
+                        padding: 0px 10px; 
+                        margin-bottom: 20px; 
+                    }
+                    .website-logo img{
+                        width: 150px;
+                    }
+                    .right-navbar ul li span {
+                        display: none;
+                    }
+
+                    .landing-heading h2 {
+                        margin: 0;
+                        padding: 20px;
+                        font-weight: 500;
+                        font-size: 30px;
+                        line-height: 1.40455;
+                        color: #202124;
+                    }
+
+                    .landing-heading p {
+                        margin: 0;
+                        padding: 0px 20px;
+                    }
                 }
             `}
         </style>
