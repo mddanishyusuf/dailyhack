@@ -46,6 +46,8 @@ So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dail
 
 Adding tricks is a big contribution to the open source community. So, the website is Open Source and code in this repository. So, you can do whatever you seems that it should be improvise and need to be changed.
 
+[List of Contributors](https://dailyhack.xyz/contributors)
+
 <br/>
 
 ### Website Build With
