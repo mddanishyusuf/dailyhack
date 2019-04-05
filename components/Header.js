@@ -4,7 +4,8 @@ import { withRouter } from 'next/router'
 import AddButton from  './AddButton'
 import { Twitter, GitHub, Users } from 'react-feather';
 
-const Header = (props) => (
+const Header = (props) => {console.log(props.router)
+    return(
     <div>
         <div className="navbar">
         <div className="website-logo">
@@ -13,12 +14,13 @@ const Header = (props) => (
         <div className="right-navbar">
             <ul>
                 <li><Link href="/contributors"><a><Users color={'#4618B1'} size={18}/> <span>Contributors</span></a></Link></li>
-                <li><a href="https://github.com/mddanishyusuf/dailyhack/" target="_blank"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
+                <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
                 <li><a href="https://twitter.com/dailyhacknotes" target="_blank"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
             </ul>
         </div>
         </div>
-        {props.router.pathname === "/" ? 
+
+        {props.router.asPath === "/" ? 
             <div className="landing-heading">
                 <h2>A community of Makers and Geeks</h2>
                 <p>It's a place where people share there daily hack they use in their developments. So, Do you have any hack?</p>
@@ -84,6 +86,6 @@ const Header = (props) => (
         </style>
         
     </div>
-)
+)}
 
 export default withRouter(Header);

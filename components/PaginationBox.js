@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function PaginationBox(props){
     const activePage = props.active_page
-    const numberOfPages = Math.ceil(props.total_issues / 5)
+    const numberOfPages = Math.ceil(props.total_issues / 10)
     const paginationArray = Array.from(Array(numberOfPages).keys())
     return(
         <div className="pagination">

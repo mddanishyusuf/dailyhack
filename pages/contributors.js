@@ -85,7 +85,6 @@ function ContributorCard(props) {
 }
 
 function Contributors(props){
-    console.log(props.contributors)
     return(
         <Fragment>
             <Layout title="Daily Hack: A community of Makers and Geeks" {...props}>
@@ -96,7 +95,9 @@ function Contributors(props){
 }
 
 Contributors.getInitialProps = async function(){
-    const result = await fetch(`${process.env.CONTRIBUTORS_API}/contributors`)
+    const url = process.env.CONTRIBUTORS_API + '/contributors'
+    console.log(url)
+    const result = await fetch(url)
     const data = await result.json()
 
     return {

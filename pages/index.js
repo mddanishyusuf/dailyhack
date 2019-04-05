@@ -9,7 +9,7 @@ function HackComponent(props){
     return (
        <div className="main-container">
            {props.dailyhacks.map(hack => (
-               <div key={hack.id} className="hack-list">
+               <div key={hack.id}>
                     <HackCard single_issue={hack}/>
                </div>
            ))}
@@ -36,7 +36,7 @@ function DailyHackHome(props){
 
 DailyHackHome.getInitialProps = async function(context){
     var page_number;
-    var per_page = 5
+    var per_page = 10
     if(context.query.page_number === undefined){
         page_number = 1
     }else{
