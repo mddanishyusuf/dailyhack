@@ -44,7 +44,7 @@ So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dail
 
 ## 🤝 How to Contribute
 
-Adding tricks is a big contribution to the open source community. So, the website is Open Source and the is in this repository. So, you can do whatever you seems that it should be imrovise and need to be changed.
+Adding tricks is a big contribution to the open source community. So, the website is Open Source and code in this repository. So, you can do whatever you seems that it should be improvise and need to be changed.
 
 <br/>
 
