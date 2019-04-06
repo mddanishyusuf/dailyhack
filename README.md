@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://dailyhack.xyz">
-    <img alt="DailyHack" src="https://github.com/mddanishyusuf/dailyhack/raw/master/static/images/DailyHackLogo.png" width="200" />
+    <img alt="DailyHack" src="https://github.com/mddanishyusuf/dailyhack/raw/master/static/images/daily-hack-logo.png" width="200" />
   </a>
 </p>
 <h1 align="center">
