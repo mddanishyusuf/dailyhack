@@ -24,6 +24,18 @@ const Layout = props => {
                 <meta property="og:description" content={props.description} />
     
                 <link href="https://fonts.googleapis.com/css?family=Questrial|Poppins:500" rel="stylesheet"/>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86945790-5"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'UA-86945790-5');
+                     `
+                    }}
+                />
+
             </Head>
             <Header/>
             <div className="main">{props.children}</div>
