@@ -7,7 +7,7 @@ import CommentBox from '../components/CommentBox'
 
 const SinglePost = withRouter(props => {
     return(
-        <Layout title={props.single_issue.title} image={`https://screenshot-v2.now.sh/dailyhack.mddanishyusuf.now.sh/post/${props.slug}`} description={props.single_issue.body.trim().substr(0,154)} pageUrl={`https://dailyhack.mddanishyusuf.now.sh/post/${props.slug}`} {...props}>
+        <Layout title={props.single_issue.title} image={`https://screenshot-v2.now.sh/dailyhack.xyz/post/${props.slug}`} description={props.single_issue.body.trim().substr(0,154)} pageUrl={`https://dailyhack.mddanishyusuf.now.sh/post/${props.slug}`} {...props}>
             <div className="single-post">
                 <HackCard {...props}/>
                 <CommentBox {...props}/>

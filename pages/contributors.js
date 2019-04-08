@@ -87,7 +87,7 @@ function ContributorCard(props) {
 function Contributors(props){
     return(
         <Fragment>
-            <Layout title="Daily Hack: A community of Makers and Geeks" {...props}>
+            <Layout title="DailyHack: Contributors of Dailyhack and there Tricks" description="List of all the contributors with no of tricks they add with there GitHub Profile" image={`https://screenshot-v2.now.sh/dailyhack.xyz/contributors`} pageUrl="https://dailyhack.xyz/contributors" {...props}>
                 <ContributorCard {...props}/>
             </Layout>
         </Fragment>

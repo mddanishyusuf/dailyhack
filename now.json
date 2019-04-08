@@ -2,7 +2,9 @@
     "version": 2,
     "builds": [{ "src": "package.json", "use": "@now/next" }],
     "routes": [
-        { "src": "/post/(?<slug>[a-z0-9-_]+-)(?<number>[0-9]+)", "dest": "/post?number=$number&slug=$slug" },
-        { "src": "/page/(?<page_number>[0-9]+)", "dest": "/index?page_number=$page_number" }
+        { "src": "/post/(?<slug>[a-z0-9-_]+-)(?<number>[0-9]+)", "dest": "/post?number=$number&slug=$slug", "headers": {"cache-control": "max-age=86400"} },
+        { "src": "/page/(?<page_number>[0-9]+)", "dest": "/index?page_number=$page_number", "headers": {"cache-control": "max-age=86400"} },
+        { "src": "/", "dest": "/index", "headers": {"cache-control": "max-age=86400"} },
+        { "src": "/contributors", "dest": "/contributors", "headers": {"cache-control": "max-age=86400"} }
     ]
 }
