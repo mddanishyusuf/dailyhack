@@ -15,11 +15,13 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
+    "cacheable-response": "^1.4.2",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.9.3",
     "moment": "^2.24.0",
     "next": "^8.0.3",
+    "next-router-events": "^2.1.0",
     "node-sass": "^4.11.0",
     "now": "^14.2.3",
     "react": "^16.8.5",

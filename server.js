@@ -1,9 +1,19 @@
+const cacheableResponse = require('cacheable-response')
 const express = require('express');
 const next = require('next');
 
+const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
+
+const ssrCache = cacheableResponse({
+    ttl: 1000 * 60 * 60, // 1hour
+    get: async ({ req, res, pagePath, queryParams }) => ({
+      data: await app.renderToHTML(req, res, pagePath, queryParams)
+    }),
+    send: ({ data, res }) => res.send(data)
+})
 
 app
     .prepare()
@@ -11,7 +21,7 @@ app
         const server = express();
 
         server.get('/post/:slug', (req, res) => {
-            const actualPage = '/post'
+            const pagePath = '/post'
             var slugArray = req.params.slug.split('-')
 
             const [number] = slugArray.slice(-1)
@@ -19,23 +29,27 @@ app
             const slug = slugArray.join('-')
             
             const queryParams = { number, slug }
-            app.render(req, res, actualPage, queryParams)
+            // app.render(req, res, pagePath, queryParams)
+            return ssrCache({ req, res, pagePath, queryParams })
         })
 
         server.get('/page/:page_number', (req, res) => {
-            const actualPage = '/'
+            const pagePath = '/'
             const page_number = req.params.page_number
             const queryParams = { page_number }
-            app.render(req, res, actualPage, queryParams)
+            return ssrCache({ req, res, pagePath, queryParams })
+            // app.render(req, res, pagePath, queryParams)
         })
+
+        server.get('/', (req, res) => ssrCache({ req, res, pagePath: '/' }))
 
         server.get('*', (req, res) => {
             return handle(req, res)
         })
 
-        server.listen(3000, err=> {
+        server.listen(port, err=> {
             if(err) throw err;
-            console.log('Server is running on localhost 3000')
+            console.log(`> Ready on http://localhost:${port}`)
         })
     })
     .catch(ex => {
