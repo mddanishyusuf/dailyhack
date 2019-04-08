@@ -4,7 +4,7 @@ import { withRouter } from 'next/router'
 import AddButton from  './AddButton'
 import { Twitter, GitHub, Users } from 'react-feather';
 
-const Header = (props) => {console.log(props.router)
+const Header = (props) => {
     return(
     <div>
         <div className="navbar">

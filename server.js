@@ -1,11 +1,15 @@
 const cacheableResponse = require('cacheable-response')
 const express = require('express');
 const next = require('next');
+const axios = require('axios');
+const fs = require("fs");
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
+
+const { DESTINATION, createSitemap } = require("./sitemap");
 
 const ssrCache = cacheableResponse({
     ttl: 1000 * 60 * 60, // 1hour
@@ -19,6 +23,17 @@ app
     .prepare()
     .then(() => {
         const server = express();
+
+        server.get("/sitemap.xml", function(req, res) {
+            res.header("Content-Type", "application/xml");
+            (async function sendXML() {
+              let xmlFile = await createSitemap();
+              // Send it to the browser
+              res.send(xmlFile);
+              // Create a file on the selected destination
+              fs.writeFileSync(DESTINATION, xmlFile);
+            })();
+         });
 
         server.get('/post/:slug', (req, res) => {
             const pagePath = '/post'

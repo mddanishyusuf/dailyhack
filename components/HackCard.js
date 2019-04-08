@@ -24,6 +24,7 @@ const HackCard = (props) => {
                     <div className="main-content">
                         <Link as={`/post/${[getSlug(issue.title),issue.number].join('-')}`} href={`/post?number=${issue.number}&slug=${[getSlug(issue.title)]}`}><a><h2>{issue.title}</h2></a></Link>
                         <Markdown
+                        className="post-body"
                         options={{
                         overrides: {
                                 a: {
@@ -99,12 +100,34 @@ const HackCard = (props) => {
                         margin-bottom: 40px;
                         border: 1px solid #d8d8d8;
                         border-radius: 4px;
-                        background-color: #fbf5f3;
                     }
 
                     .main-content {
                         padding: 15px;
+                        font-size: 0.95rem;
                     }
+
+                    .post-body pre {
+                        background-color: #f6f8fa;
+                        border-radius: 3px;
+                        font-size: 85%;
+                        line-height: 1.45;
+                        overflow: auto;
+                        padding: 16px;
+                    }
+
+                    .post-body p code, .post-body ol li code {
+                        background-color: rgba(27,31,35,.05);
+                        border-radius: 3px;
+                        font-size: 85%;
+                        margin: 0;
+                        padding: .2em .4em;
+                    }
+
+                    .post-body a {
+                        color: #4618B1 !important;
+                        text-decoration: underline !important;
+                     }
 
                     .hack-card-content h2 {
                         margin: 0;
@@ -132,8 +155,14 @@ const HackCard = (props) => {
                         display: grid;
                         grid-template-columns: auto 180px;
                         font-size: 12px;
-                        background-color: #fff;
                         padding: 10px 15px;
+                        background-color: #f6f8fa;
+                        border-bottom: 1px solid #d1d5da;
+                        border-top-left-radius: 3px;
+                        border-top-right-radius: 3px;
+                        color: #586069;
+                        padding-left: 15px;
+                        padding-right: 15px;
                     }
 
                     .footer-meta {

@@ -5,7 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = props => {
-    console.log(props)
     return(
         <div>
             <Head>

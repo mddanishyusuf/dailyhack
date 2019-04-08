@@ -17,6 +17,7 @@
     "axios": "^0.18.0",
     "cacheable-response": "^1.4.2",
     "express": "^4.16.4",
+    "fs": "0.0.1-security",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.9.3",
     "moment": "^2.24.0",
