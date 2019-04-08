@@ -28,9 +28,7 @@ app
             res.header("Content-Type", "application/xml");
             (async function sendXML() {
               let xmlFile = await createSitemap();
-              // Send it to the browser
               res.send(xmlFile);
-              // Create a file on the selected destination
               fs.writeFileSync(DESTINATION, xmlFile);
             })();
          });

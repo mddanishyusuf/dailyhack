@@ -20,7 +20,7 @@ function ContributorCard(props) {
                             </div>
                             <div className="name">{cont.user.login}</div>
                             <div className="tricks-count">{cont.issues.length} {cont.issues.length === 1 ? 'trick' : 'tricks'}</div>
-                            <div className="profile-url"><a href={`https://github.com/${cont.user.login}`}>{`https://github.com/${cont.user.login}`}</a></div>
+                            <div className="profile-url"><a href={`https://github.com/${cont.user.login}`} target="_blank">{`https://github.com/${cont.user.login}`}</a></div>
                         </div>
                     </div>
                 ))}
