@@ -12,7 +12,7 @@ const handle = app.getRequestHandler();
 const { DESTINATION, createSitemap } = require("./sitemap");
 
 const ssrCache = cacheableResponse({
-    ttl: 1000 * 60 * 60, // 1hour
+    ttl: 1000 * 30 * 60, // 30min
     get: async ({ req, res, pagePath, queryParams }) => ({
       data: await app.renderToHTML(req, res, pagePath, queryParams)
     }),

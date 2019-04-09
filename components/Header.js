@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-
+import { Twitter, GitHub, Users, Bell } from 'react-feather';
 import AddButton from  './AddButton'
-import { Twitter, GitHub, Users } from 'react-feather';
+import NotifyMeModal from './NotifyMeModal';
+
 
 const Header = (props) => {
     return(
@@ -14,10 +15,12 @@ const Header = (props) => {
         <div className="right-navbar">
             <ul>
                 <li><Link href="/contributors"><a><Users color={'#4618B1'} size={18}/> <span>Contributors</span></a></Link></li>
+                <li><a className="btn" href="#open-modal"><Bell color={'#4618B1'} size={18}/> <span>Notify Me</span></a></li>
                 <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
                 <li><a href="https://twitter.com/dailyhacknotes" target="_blank"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
             </ul>
         </div>
+        <NotifyMeModal/>
         </div>
 
         {props.router.asPath === "/" ? 
@@ -71,6 +74,7 @@ const Header = (props) => {
                     align-items: center;
                     float: left;
                     list-style: none;
+                    cursor: pointer;
                 }
 
                 .right-navbar ul li a{

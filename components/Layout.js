@@ -11,6 +11,7 @@ const Layout = props => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
                 <title>{props.title}</title>
+                <link rel="icon" href="/static/images/daily-hack-favicon.png" type="image/gif" sizes="16x16"/> 
                 <meta name="title" content={props.title} />
                 <meta name="description" content={props.description} />
     
