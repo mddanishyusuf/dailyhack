@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import { Twitter, GitHub, Users, Bell } from 'react-feather';
+import { Twitter, GitHub, Users, Bell, Coffee } from 'react-feather';
 import AddButton from  './AddButton'
 import NotifyMeModal from './NotifyMeModal';
 
@@ -16,6 +16,7 @@ const Header = (props) => {
             <ul>
                 <li><Link href="/contributors"><a><Users color={'#4618B1'} size={18}/> <span>Contributors</span></a></Link></li>
                 <li><a className="btn" href="#open-modal"><Bell color={'#4618B1'} size={18}/> <span>Notify Me</span></a></li>
+                <li><a href="https://www.buymeacoffee.com/mddanishyusuf" target="_blank"><Coffee color={'#4618B1'} size={18}/> <span>BMC</span></a></li>
                 <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
                 <li><a href="https://twitter.com/dailyhacknotes" target="_blank"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
             </ul>
@@ -25,7 +26,7 @@ const Header = (props) => {
 
         {props.router.asPath === "/" ? 
             <div className="landing-heading">
-                <h2>A community of Makers and Geeks</h2>
+                <h2>A Community of Makers and Geeks</h2>
                 <p>It's a place where people share there daily hack they use in their developments. So, Do you have any hack?</p>
                 <AddButton/>
             </div>
