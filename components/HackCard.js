@@ -51,7 +51,7 @@ const HackCard = (props) => {
                             <Heart size={18} color={'#4618B1'}/><span>25</span>
                         </div> */}
                         <div className="any-comments footer-meta">
-                            <MessageSquare size={18} color={'#4618B1'}/><a href={issue.html_url} target="_blank"><span>{issue.comments === 0 ? 'comment?' : issue.comments}</span></a>
+                            <a href={issue.html_url} target="_blank"><MessageSquare size={18} color={'#4618B1'}/><span>{issue.comments === 0 ? 'comment?' : issue.comments}</span></a>
                             <span>Share:</span> 
                             <a href={`https://twitter.com/intent/tweet/?text=${encodeURI(issue.title)}&amp;url=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Twitter size={18} color={'#4618B1'}/></a>
                             <a href={`https://facebook.com/sharer/sharer.php?u=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Facebook size={18} color={'#4618B1'}/></a>
