@@ -9,7 +9,7 @@ function ContributorCard(props) {
                 <div className="heading">   
                     <h1>Contributors.</h1>
                     <small>{props.contributors.length} Members</small>
-                    <p>These are the makers, geeks, developers. If you have any hack then your wlecome to the community.</p>
+                    <p>These are the makers, geeks, developers. If you have any hack then your welcome to the community.</p>
                     <a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank">Join Community</a>
                 </div>
                 {props.contributors.map(cont => (
