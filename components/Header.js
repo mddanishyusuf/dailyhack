@@ -8,6 +8,7 @@ import NotifyMeModal from './NotifyMeModal';
 const Header = (props) => {
     return(
     <div>
+        <div className="ph-banner"><a href="https://www.producthunt.com/posts/dailyhack-2" target="_blank">🔥 Hey, we are on ProductHunt Today. Support Us there. Thanks</a></div>
         <div className="navbar">
         <div className="website-logo">
             <Link href="/"><a><img src='/static/images/daily-hack-logo.png'/></a></Link>
@@ -34,6 +35,18 @@ const Header = (props) => {
         
         <style jsx>
             {`
+
+                .ph-banner {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    background-color: #da552f;
+                    color: #fff;
+                    padding: 5px;
+                }
+                .ph-banner a {
+                    color: #fff;
+                    text-decoration: none;
+                }
                 .navbar {
                     display: grid;
                     grid-template-columns: 50% 50%;

@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import moment from 'moment'
+import Markdown from 'markdown-to-jsx';
+
+const HyperLink = ({ children, ...props }) => (
+    <a {...props} href={props.href} target="_blank">{children}</a>
+);
 
 const Comments = function(props){
     const {comments} = props;
@@ -24,7 +29,19 @@ const Comments = function(props){
                                             <div className="comment-date">{moment(comment.created_at).fromNow()}</div>
                                         </div>
                                     </div>
-                                    <div className="comment-text">{comment.body}</div>
+                                    <div className="comment-text">
+                                        <Markdown
+                                        className="post-body"
+                                        options={{
+                                        overrides: {
+                                            a: {
+                                                component: HyperLink
+                                            },
+                                            },
+                                        }}
+                                        >{comment.body}
+                                        </Markdown>
+                                    </div>
                                 </div>
                             )
                         })}

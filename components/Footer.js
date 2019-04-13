@@ -7,7 +7,7 @@ const Footer = function(props) {
             <div className="footer">
                 <div className="footer-inner">
                     <p>A community build by <Link href="/contributors"><a>contributors</a></Link> for Makers & Geeks</p>
-                    <p>Website by <a href="https://twitter.com/mddanishyusuf" target="_blank">@mddanishyusuf</a></p>
+                    <p>Website by <a href="https://twitter.com/mddanishyusuf" target="_blank">@mddanishyusuf</a> and <a href="https://twitter.com/fajarsiddiqFS" target="_blank">@fajarsiddiqFS</a></p>
                     <p>Build with <a href="https://nextjs.org/" target="_blank">Next.js</a> + <a href="https://developer.github.com/" target="_blank">GitHub APIs</a> + <a href="http://glitch.com/" target="_blank">Glitch</a> + <a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank">GitHub Issues CMS</a> + <a href="https://zeit.co" target="_blank">Zeit</a></p>
                 </div>
                 <div className="footer-nav right-navbar">
