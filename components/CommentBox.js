@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import moment from 'moment'
 import Markdown from 'markdown-to-jsx';
+import {GITHUB_ENDPOIINT_LOCAL} from '../config/global'
 
 const HyperLink = ({ children, ...props }) => (
     <a {...props} href={props.href} target="_blank">{children}</a>
@@ -93,7 +94,7 @@ const CommentBox = function(props){
     const [comments, setComments] = useState([])
 
     useEffect(()=> {
-        axios.get(`https://api.github.com/repos/mddanishyusuf/dailyhack/issues/${props.single_issue.number}/comments`).then(res=>{
+        axios.get(`${GITHUB_ENDPOIINT_LOCAL}/issues/${props.single_issue.number}/comments`).then(res=>{
             setComments(res.data)
         })
     },[])
@@ -117,6 +118,14 @@ const CommentBox = function(props){
                     .no-comments {
                         font-size: 14px;
                         margin-bottom: 20px
+                    }
+
+                    @media screen and (max-width: 700px){
+                        .comment-box {
+                            display: grid;
+                            grid-template-columns: 0px auto;
+                            padding: 20px;
+                        }
                     }
                 `}
             </style>

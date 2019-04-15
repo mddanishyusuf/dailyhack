@@ -10,15 +10,14 @@ function NotifyMeModal(){
       <div className="repo-buttons">
         <div>
           <h3>To Subscibe</h3>
-          <iframe src="https://ghbtns.com/github-btn.html?user=mddanishyusuf&repo=dailyhack&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=mddanishyusuf&repo=dailyhack&type=watch&count=true&size=large&v=2" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
         <div>
           <h3>To Appreciate</h3>
-          <iframe src="https://ghbtns.com/github-btn.html?user=mddanishyusuf&repo=dailyhack&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=mddanishyusuf&repo=dailyhack&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
       </div>
       </div>
-      <a href="https://aminoeditor.com" target="_blank"></a>
             <style jsx>
                 {`
                     .repo-buttons {

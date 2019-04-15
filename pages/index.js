@@ -4,6 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import PaginationBox from '../components/PaginationBox';
+import {PER_PAGE} from '../config/global'
 
 function HackComponent(props){
     return (
@@ -41,13 +42,12 @@ function DailyHackHome(props){
 
 DailyHackHome.getInitialProps = async function(context){
     var page_number;
-    var per_page = 10
     if(context.query.page_number === undefined){
         page_number = 1
     }else{
         page_number = context.query.page_number
     }
-    const url = process.env.DAILYHACK_GITHUB_API + '/' + page_number + '/' + per_page
+    const url = process.env.DAILYHACK_GITHUB_API + '/issues/' + page_number + '/' + PER_PAGE
     const result = await fetch(url)
     const data = await result.json()
     return {

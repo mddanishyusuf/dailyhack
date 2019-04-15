@@ -14,7 +14,7 @@ const AddButton = () => (
                     text-align: center;
                     display: inline-block;
                     padding: 0;
-                    margin: 0 0 80px 0px;
+                    margin: 0 0 40px 0px;
                     border-radius: 4px;
                     color: #24292e;
                 }

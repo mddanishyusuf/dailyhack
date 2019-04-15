@@ -21,7 +21,7 @@ const API_SOURCE = "https://dailyhack.glitch.me/issues/1/100";
 // By default is .next/static/sitemap.xml
 const DESTINATION =
   process.env.DESTINATION ||
-  path.join(resolveApp(".next/static"), "sitemap.xml");
+  path.join(resolveApp("./static"), "sitemap.xml");
 
 
 const createSitemap = () => {

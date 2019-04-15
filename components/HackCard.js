@@ -40,21 +40,18 @@ const HackCard = (props) => {
                             <Tag size={18} color={'#4618B1'}/><span>
                                 {issue.labels !== undefined ? issue.labels.map(label => {
                                     return(
-                                        <li key={label.id}>#{label.name}</li>
+                                        <li key={label.id}><Link href={`/tag/${label.name}`}><a>#{label.name}</a></Link></li>
                                     )
                                 }): ''}
                             </span>
                             </ul>
                             
                         </div>
-                        {/* <div className="heart footer-meta">
-                            <Heart size={18} color={'#4618B1'}/><span>25</span>
-                        </div> */}
                         <div className="any-comments footer-meta">
-                            <a href={issue.html_url} target="_blank"><MessageSquare size={18} color={'#4618B1'}/><span>{issue.comments === 0 ? 'comment?' : issue.comments}</span></a>
+                        <Link as={`/post/${[getSlug(issue.title),issue.number].join('-')}`} href={`/post?number=${issue.number}&slug=${[getSlug(issue.title)]}`}><a><MessageSquare size={18} color={'#4618B1'}/><span>{issue.comments === 0 ? 'comment?' : issue.comments}</span></a></Link>
                             <span>Share:</span> 
-                            <a href={`https://twitter.com/intent/tweet/?text=${encodeURI(issue.title)}&amp;url=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Twitter size={18} color={'#4618B1'}/></a>
-                            <a href={`https://facebook.com/sharer/sharer.php?u=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank"  rel="noopener"><Facebook size={18} color={'#4618B1'}/></a>
+                            <a href={`https://twitter.com/intent/tweet/?text=${encodeURI(issue.title)}&amp;url=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank" rel="noopener noreferrer"><Twitter size={18} color={'#4618B1'}/></a>
+                            <a href={`https://facebook.com/sharer/sharer.php?u=https://dailyhack.xyz/post/${[getSlug(issue.title),issue.number].join('-')}`} target="_blank" rel="noopener noreferrer"><Facebook size={18} color={'#4618B1'}/></a>
                         </div>
                     </div>
                 </div>
@@ -114,6 +111,10 @@ const HackCard = (props) => {
                         line-height: 1.45;
                         overflow: auto;
                         padding: 16px;
+                    }
+
+                    .post-body img {
+                        max-height: 250px;
                     }
 
                     .post-body p code, .post-body ol li code {

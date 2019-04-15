@@ -1,14 +1,16 @@
+import {Fragment} from 'react';
 import Link from 'next/link'
 import { withRouter } from 'next/router'
 import { Twitter, GitHub, Users, Bell, Coffee } from 'react-feather';
 import AddButton from  './AddButton'
 import NotifyMeModal from './NotifyMeModal';
+import PostFilters from './PostFilters';
 
 
 const Header = (props) => {
     return(
     <div>
-        <div className="ph-banner"><a href="https://www.producthunt.com/posts/dailyhack-2" target="_blank">🔥 Hey, we are on ProductHunt Today. Support Us there. Thanks</a></div>
+        <div className="ph-banner"><a href="https://www.producthunt.com/posts/dailyhack-2" target="_blank" rel="noopener noreferrer">🔥 Hey, we are on ProductHunt Today. Support Us there. Thanks</a></div>
         <div className="navbar">
         <div className="website-logo">
             <Link href="/"><a><img src='/static/images/daily-hack-logo.png'/></a></Link>
@@ -17,20 +19,24 @@ const Header = (props) => {
             <ul>
                 <li><Link href="/contributors"><a><Users color={'#4618B1'} size={18}/> <span>Contributors</span></a></Link></li>
                 <li><a className="btn" href="#open-modal"><Bell color={'#4618B1'} size={18}/> <span>Notify Me</span></a></li>
-                <li><a href="https://www.buymeacoffee.com/mddanishyusuf" target="_blank"><Coffee color={'#4618B1'} size={18}/> <span>BMC</span></a></li>
-                <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
-                <li><a href="https://twitter.com/dailyhacknotes" target="_blank"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
+                <li><a href="https://www.buymeacoffee.com/mddanishyusuf" target="_blank" rel="noopener noreferrer"><Coffee color={'#4618B1'} size={18}/> <span>BMC</span></a></li>
+                <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank" rel="noopener noreferrer"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
+                <li><a href="https://twitter.com/dailyhacknotes" target="_blank" rel="noopener noreferrer"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
             </ul>
         </div>
         <NotifyMeModal/>
         </div>
 
         {props.router.asPath === "/" ? 
+        <Fragment>
             <div className="landing-heading">
                 <h2>A Community of Makers and Geeks</h2>
                 <p>It's a place where people share there daily hack they use in their developments. So, Do you have any hack?</p>
                 <AddButton/>
             </div>
+
+            <PostFilters />
+        </Fragment>
         : ""}
         
         <style jsx>

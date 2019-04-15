@@ -54,6 +54,22 @@ app
             // app.render(req, res, pagePath, queryParams)
         })
 
+        server.get('/tag/:tag_name', (req, res) => {
+            const pagePath = '/tag'
+            const tag_name = req.params.tag_name
+            const queryParams = { tag_name }
+            return ssrCache({ req, res, pagePath, queryParams })
+            // app.render(req, res, pagePath, queryParams)
+        })
+
+        server.get('/search/:keywords', (req, res) => {
+            const pagePath = '/search'
+            const keywords = req.params.keywords
+            const queryParams = { keywords }
+            return ssrCache({ req, res, pagePath, queryParams })
+            // app.render(req, res, pagePath, queryParams)
+        })
+
         server.get('/', (req, res) => ssrCache({ req, res, pagePath: '/' }))
 
         server.get('*', (req, res) => {

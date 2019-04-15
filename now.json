@@ -6,6 +6,8 @@
         { "src": "/page/(?<page_number>[0-9]+)", "dest": "/index?page_number=$page_number", "headers": {"cache-control": "max-age=1800"} },
         { "src": "/", "dest": "/index", "headers": {"cache-control": "max-age=1800"} },
         { "src": "/contributors", "dest": "/contributors", "headers": {"cache-control": "max-age=1800"} },
+        { "src": "/tag/(?<tag_name>[a-z]+)", "dest": "/tag?tag_name=$tag_name", "headers": {"cache-control": "max-age=1800"} },
+        { "src": "/search/(?<keywords>[a-z0-9+]+)", "dest": "/search?keywords=$keywords", "headers": {"cache-control": "max-age=1800"} },
         { "src": "/sitemap.xml", "dest": "/index.js"}
     ]
 }

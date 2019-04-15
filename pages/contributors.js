@@ -75,6 +75,7 @@ function ContributorCard(props) {
 
                     .user-meta .picture img {
                         width: 100px;
+                        height: 100px;
                         border-radius:  52% 55% 77% 67% / 54% 84% 41% 72%;
                         border: 3px solid #4618B1
                     }
@@ -95,7 +96,7 @@ function Contributors(props){
 }
 
 Contributors.getInitialProps = async function(){
-    const url = process.env.CONTRIBUTORS_API + '/contributors'
+    const url = process.env.DAILYHACK_GITHUB_API + '/contributors'
     const result = await fetch(url)
     const data = await result.json()
 

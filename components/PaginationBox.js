@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import {PER_PAGE} from '../config/global'
 
 function PaginationBox(props){
     const activePage = props.active_page
-    const numberOfPages = Math.ceil(props.total_issues / 10)
+    const numberOfPages = Math.ceil(props.total_issues / PER_PAGE)
     const paginationArray = Array.from(Array(numberOfPages).keys())
     return(
         <div className="pagination">
