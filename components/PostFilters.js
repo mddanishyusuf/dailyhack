@@ -16,7 +16,6 @@ function PostFilters(){
     },[])
     return(
         <div>
-            <SearchInput query=""/>
             <ul className="post-filtters">
             {tags.map((tag, key)=>{
                 if(tag.name !== 'dailyhack'){
@@ -26,6 +25,7 @@ function PostFilters(){
                 }
             })}
             </ul>
+            <SearchInput query=""/>
             <style jsx>
                 {`
                     .search-issues {

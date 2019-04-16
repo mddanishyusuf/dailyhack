@@ -22,18 +22,25 @@ function SearchInput(props){
         <div>
             <div className="search-issues">
                 <form onSubmit={searchIssues.bind()}>
-                    Let's find some tricks from past: <input type="text" onChange={setQuery.bind()} value={searchQuery} placeholder="your keywords"/>
+                    <input type="text" onChange={setQuery.bind()} value={searchQuery} placeholder="🔍 Let's find some tricks from past"/>
                 </form>
             </div>
             <style jsx>
                 {`
                     .search-issues {
                         text-align: center;
+                        margin-bottom: 20px;
                     }
 
                     .search-issues input {
                         padding: 5px 10px;
-                        min-width: 200px;
+                        min-width: 300px;
+                        font-size: 1rem;
+                        border: 2px solid #707070;
+                        -webkit-text-decoration: none;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        font-family: 'Questrial', sans-serif;
                     }
                 `}
             </style>

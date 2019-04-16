@@ -5,7 +5,7 @@ const AddButton = () => (
     <div style={{textAlign: 'center'}}>
         <div className="right-navbar">
             <ul>
-                <li><a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank"><PlusSquare color={'#4618B1'} size={18} /> <span>any trick?</span></a></li>
+                <li><a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank"><PlusSquare color={'#4618B1'} size={18} /> <span>submit your hack</span></a></li>
             </ul>
         </div>
         <style jsx>
