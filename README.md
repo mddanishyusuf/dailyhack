@@ -1,4 +1,5 @@
 <p align="center">
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
   <a href="https://dailyhack.xyz">
     <img alt="DailyHack" src="https://github.com/mddanishyusuf/dailyhack/raw/master/static/images/daily-hack-logo.png" width="200" />
   </a>
@@ -68,3 +69,15 @@ Thanks to our many contributors and friends those give time to add tricks.
 ## License
 
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://mohddanish.me"><img src="https://avatars2.githubusercontent.com/u/9165019?v=4" width="100px;" alt="Mohd Danish Yusuf"/><br /><sub><b>Mohd Danish Yusuf</b></sub></a><br /><a href="https://github.com/mddanishyusuf/dailyhack/commits?author=mddanishyusuf" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
