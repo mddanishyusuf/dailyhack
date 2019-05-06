@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mddanishyusuf",
+      "name": "Mohd Danish Yusuf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9165019?v=4",
+      "profile": "https://mohddanish.me",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "dailyhack",
+  "projectOwner": "mddanishyusuf",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
