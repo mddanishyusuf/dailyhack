@@ -29,7 +29,7 @@ app
             (async function sendXML() {
               let xmlFile = await createSitemap();
               res.send(xmlFile);
-              fs.writeFileSync(DESTINATION, xmlFile);
+            //   fs.writeFileSync(DESTINATION, xmlFile);
             })();
          });
 

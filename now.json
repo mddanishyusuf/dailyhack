@@ -8,6 +8,6 @@
         { "src": "/contributors", "dest": "/contributors", "headers": {"cache-control": "max-age=1800"} },
         { "src": "/tag/(?<tag_name>[a-z]+)", "dest": "/tag?tag_name=$tag_name", "headers": {"cache-control": "max-age=1800"} },
         { "src": "/search/(?<keywords>[a-z0-9+]+)", "dest": "/search?keywords=$keywords", "headers": {"cache-control": "max-age=1800"} },
-        { "src": "/sitemap.xml", "dest": "/index.js"}
+        { "src": "/sitemap.xml", "dest": "/server.js"}
     ]
 }

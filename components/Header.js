@@ -10,7 +10,7 @@ import PostFilters from './PostFilters';
 const Header = (props) => {
     return(
     <div>
-        <div className="ph-banner"><a href="https://www.producthunt.com/posts/dailyhack-2" target="_blank" rel="noopener noreferrer">🔥 Hey, we are on ProductHunt Today. Support Us there. Thanks</a></div>
+        {/* <div className="ph-banner"><a href="https://www.producthunt.com/posts/dailyhack-2" target="_blank" rel="noopener noreferrer">🔥 Hey, we are on ProductHunt Today. Support Us there. Thanks</a></div> */}
         <div className="navbar">
         <div className="website-logo">
             <Link href="/"><a><img src='/static/images/daily-hack-logo.png'/></a></Link>
