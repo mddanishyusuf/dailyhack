@@ -1,17 +1,18 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import fetch from 'isomorphic-unfetch';
+import {withRouter} from 'next/router';
 
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import PaginationBox from '../components/PaginationBox';
 import {PER_PAGE} from '../config/global'
 
-function HackComponent(props){
+const HackComponent = withRouter(props=>{
     return (
        <div className="main-container">
            {props.dailyhacks.map(hack => (
                <div key={hack.id}>
-                    <HackCard single_issue={hack}/>
+                    <HackCard single_issue={hack} {...props}/>
                </div>
            ))}
            <style jsx>{`
@@ -27,7 +28,7 @@ function HackComponent(props){
            `}</style>
         </div>
     )
-}
+})
 
 function DailyHackHome(props){
     return(

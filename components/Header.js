@@ -1,7 +1,7 @@
 import {Fragment} from 'react';
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import { Twitter, GitHub, Users, Bell, Coffee } from 'react-feather';
+import { Twitter, GitHub, Users, Bell, Coffee, Rss } from 'react-feather';
 import AddButton from  './AddButton'
 import NotifyMeModal from './NotifyMeModal';
 import PostFilters from './PostFilters';
@@ -22,6 +22,7 @@ const Header = (props) => {
                 <li><a href="https://www.buymeacoffee.com/mddanishyusuf" target="_blank" rel="noopener noreferrer"><Coffee color={'#4618B1'} size={18}/> <span>BMC</span></a></li>
                 <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank" rel="noopener noreferrer"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
                 <li><a href="https://twitter.com/dailyhacknotes" target="_blank" rel="noopener noreferrer"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
+                <li><Link href="/sitemap"><a><Rss color={'#4618B1'} size={18} /> <span>Sitemap</span></a></Link></li>
             </ul>
         </div>
         <NotifyMeModal/>

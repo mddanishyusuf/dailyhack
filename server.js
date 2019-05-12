@@ -24,14 +24,14 @@ app
     .then(() => {
         const server = express();
 
-        server.get("/sitemap.xml", function(req, res) {
-            res.header("Content-Type", "application/xml");
-            (async function sendXML() {
-              let xmlFile = await createSitemap();
-              res.send(xmlFile);
-            //   fs.writeFileSync(DESTINATION, xmlFile);
-            })();
-         });
+        // server.get("/sitemap.xml", function(req, res) {
+        //     res.header("Content-Type", "application/xml");
+        //     (async function sendXML() {
+        //       let xmlFile = await createSitemap();
+        //       res.send(xmlFile);
+        //     //   fs.writeFileSync(DESTINATION, xmlFile);
+        //     })();
+        //  });
 
         server.get('/post/:slug', (req, res) => {
             const pagePath = '/post'

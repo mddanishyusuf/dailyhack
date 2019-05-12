@@ -22,7 +22,7 @@ const HackCard = (props) => {
                 </div>
                 <div className="hack-card-content">
                     <div className="main-content">
-                        <Link as={`/post/${[getSlug(issue.title),issue.number].join('-')}`} href={`/post?number=${issue.number}&slug=${[getSlug(issue.title)]}`}><a><h2>{issue.title}</h2></a></Link>
+                        {props.router.asPath !== '/' ? <h2>{issue.title}</h2> : <Link as={`/post/${[getSlug(issue.title),issue.number].join('-')}`} href={`/post?number=${issue.number}&slug=${[getSlug(issue.title)]}`}><a><h2>{issue.title}</h2></a></Link>}
                         <Markdown
                         className="post-body"
                         options={{

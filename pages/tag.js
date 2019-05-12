@@ -1,34 +1,36 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import fetch from 'isomorphic-unfetch';
 import axios from 'axios';
+import {withRouter} from 'next/router';
 
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import PaginationBox from '../components/PaginationBox';
 import {GITHUB_ENDPOIINT_LOCAL, PER_PAGE} from '../config/global'
 
-function HackComponent(props){
+
+const HackComponent = withRouter(props=>{
     return (
-       <div className="main-container">
-           {props.issues.map(hack => (
-               <div key={hack.id}>
-                    <HackCard single_issue={hack}/>
-               </div>
-           ))}
-           <style jsx>{`
-               .main-container {
-                    padding: 10px;
-                }   
-               @media screen and (min-width: 700px) {
-                    .main-container {
-                        width: 80%;
-                        margin: 0px auto;
-                    }   
-               }            
-           `}</style>
-        </div>
+        <div className="main-container">
+        {props.issues.map(hack => (
+            <div key={hack.id}>
+                 <HackCard single_issue={hack} {...props}/>
+            </div>
+        ))}
+        <style jsx>{`
+            .main-container {
+                 padding: 10px;
+             }   
+            @media screen and (min-width: 700px) {
+                 .main-container {
+                     width: 80%;
+                     margin: 0px auto;
+                 }   
+            }            
+        `}</style>
+     </div>
     )
-}
+})
 
 function DailyTagPage(props){
 
@@ -52,7 +54,7 @@ function DailyTagPage(props){
     return(
         <Fragment>
             <Layout title={`DailyHack: ${props.tag_name} tricks`} description="An community of makers, developers and geeks where they share there daily hack they use in their developments." image="/static/images/daily-hack-image.png" pageUrl="https://dailyhack.xyz" {...props}>
-                <HackComponent issues={issues}/>
+                <HackComponent issues={issues} {...props}/>
                 <div className="load-more-issues">
                     {loadingCount
                         ? <span onClick={loadMoreTagIssues}>Load More</span>
