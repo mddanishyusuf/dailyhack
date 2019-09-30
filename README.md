@@ -11,7 +11,7 @@
   💡 :rocket:
 </h3>
 <p align="center">
-  It's a place where people share there daily hacks they use in their developments.<br/>So, Do you have any hack?
+  It's a place where people share there daily hacks they use in their developments.<br/>So, Do you have any hacks?
 </p>
 <p align="center">
   <a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank">
@@ -32,13 +32,13 @@
 
 ## 📖 About DailyHack
 
-DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the word. So, anyone can share there methods with the others makers and developers.
+DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the world. So, anyone can share their methods with the others makers and developers.
 
 <br/>
 
 ## ✍ How to add tricks
 
-So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's eassy to add your tricks. Just create an issues and write your hack into editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
+So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's easy to add your tricks. Just create an issues and write your hack into editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
 
 <br/>
 
