@@ -32,19 +32,19 @@
 
 ## 📖 About DailyHack
 
-DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the word. So, anyone can share there methods with the others makers and developers.
+DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the world. So, anyone can share their methods with the other makers and developers.
 
 <br/>
 
 ## ✍ How to add tricks
 
-So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's eassy to add your tricks. Just create an issues and write your hack into editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
+So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's easy to add your tricks. Just create an issue and write your hack into an editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
 
 <br/>
 
 ## 🤝 How to Contribute
 
-Adding tricks is a big contribution to the open source community. So, the website is Open Source and code in this repository. So, you can do whatever you seems that it should be improvise and need to be changed.
+Adding tricks is a big contribution to the open-source community. So, the website is Open Source and code in this repository. So, you can do whatever you seem that it should be improvised and need to be changed.
 
 [List of Contributors](https://dailyhack.xyz/contributors)
 
@@ -52,7 +52,7 @@ Adding tricks is a big contribution to the open source community. So, the websit
 
 ### Website Build With
 
-- **Nextjs**- For SSR, Front-end and I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
+- **Next.js**- For SSR, Front-end and I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
 - **GitHub Issues:** As a CMS for tricks
 - **Glitch:** An layer on the GitHub API to secure access_token
 - **Zeit:** To host the application
