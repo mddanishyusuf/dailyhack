@@ -5,15 +5,39 @@ import axios from 'axios';
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import PaginationBox from '../components/PaginationBox';
+import {withRouter} from 'next/router';
 import SearchInput from '../components/SearchInput'
 import {GITHUB_ENDPOIINT_LOCAL, PER_PAGE, GITHUB_SEARCH_ENDPOIINT} from '../config/global'
 
-function HackComponent(props){
+// function HackComponent(props){
+//     return (
+//        <div className="main-container">
+//            {props.issues.length > 0 ? props.issues.map(hack => (
+//                <div key={hack.id}>
+//                     <HackCard single_issue={hack}/>
+//                </div>
+//            )): 'No Result Found.'}
+//            <style jsx>{`
+//                .main-container {
+//                     padding: 10px;
+//                 }   
+//                @media screen and (min-width: 700px) {
+//                     .main-container {
+//                         width: 80%;
+//                         margin: 0px auto;
+//                     }   
+//                }            
+//            `}</style>
+//         </div>
+//     )
+// }
+
+const HackComponent = withRouter(props=>{
     return (
        <div className="main-container">
            {props.issues.length > 0 ? props.issues.map(hack => (
                <div key={hack.id}>
-                    <HackCard single_issue={hack}/>
+                    <HackCard single_issue={hack} {...props}/>
                </div>
            )): 'No Result Found.'}
            <style jsx>{`
@@ -29,7 +53,7 @@ function HackComponent(props){
            `}</style>
         </div>
     )
-}
+})
 
 function SearchPage(props){
 

@@ -11,6 +11,9 @@
   💡 :rocket:
 </h3>
 <p align="center">
+  Website: [https://dailyhack.xyz](https://dailyhack.xyz)
+</p>
+<p align="center">
   It's a place where people share there daily hacks they use in their developments.<br/>So, Do you have any hack?
 </p>
 <p align="center">

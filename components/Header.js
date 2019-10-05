@@ -22,7 +22,7 @@ const Header = (props) => {
                 <li><a href="https://www.buymeacoffee.com/mddanishyusuf" target="_blank" rel="noopener noreferrer"><Coffee color={'#4618B1'} size={18}/> <span>BMC</span></a></li>
                 <li><a href="https://github.com/mddanishyusuf/dailyhack" target="_blank" rel="noopener noreferrer"><GitHub color={'#4618B1'} size={18}/> <span>GitHub</span></a></li>
                 <li><a href="https://twitter.com/dailyhacknotes" target="_blank" rel="noopener noreferrer"><Twitter color={'#4618B1'} size={18} /> <span>Twitter</span></a></li>
-                <li><Link href="/sitemap"><a><Rss color={'#4618B1'} size={18} /> <span>Sitemap</span></a></Link></li>
+                {/* <li><Link href="/sitemap"><a><Rss color={'#4618B1'} size={18} /> <span>Sitemap</span></a></Link></li> */}
             </ul>
         </div>
         <NotifyMeModal/>
