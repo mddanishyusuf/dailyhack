@@ -14,7 +14,7 @@
   Website: [https://dailyhack.xyz](https://dailyhack.xyz)
 </p>
 <p align="center">
-  It's a place where people share there daily hacks they use in their developments.<br/>So, Do you have any hack to submit?
+  It's a place where people share the daily hacks they use during development.<br/>So, Do you have any hack to submit?
 </p>
 <p align="center">
   <a href="https://github.com/mddanishyusuf/dailyhack/issues" target="_blank">
@@ -35,19 +35,19 @@
 
 ## 📖 About DailyHack
 
-DailyHack is just an Idea about sharing the **hack/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. So, it's a community of the makers and geeks around the world. So, anyone can share their methods with the other makers and developers.
+DailyHack is just an Idea about sharing the **hacks/tricks/shortcuts** we use in our daily life to develop and fix the things quick and smart way. It's a community of makers and geeks from around the world. Anyone can share their methods with other makers and developers.
 
 <br/>
 
 ## ✍ How to add tricks
 
-So, we are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's easy to add your tricks. Just create an issue and write your hack into an editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
+We are using the [GitHub Issue System](https://github.com/mddanishyusuf/dailyhack/issues) as a CMS. So, it's easy to add your tricks. Just create an issue and write your hack into an editor and submit. After you submit the author/editors will set the tags to your issues and it will show [on the website](https://dailyhack.xyz/).
 
 <br/>
 
 ## 🤝 How to Contribute
 
-Adding tricks is a big contribution to the open-source community. So, the website is Open Source and code in this repository. So, you can do whatever you seem that it should be improvised and need to be changed.
+Adding tricks is a big contribution to the open-source community. The website and the code in this repository is Open Source. So, you can make any improvements or changes you desire.
 
 [List of Contributors](https://dailyhack.xyz/contributors)
 
@@ -55,16 +55,16 @@ Adding tricks is a big contribution to the open-source community. So, the websit
 
 ### Website Build With
 
-- **Next.js**- For SSR, Front-end and I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
+- **Next.js**- For SSR, Front-end I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
 - **GitHub Issues:** As a CMS for tricks
-- **Glitch:** An layer on the GitHub API to secure access_token
+- **Glitch:** A layer on the GitHub API to secure access_token
 - **Zeit:** To host the application
 
 <br/>
 
 ## 💜 Thanks to Our Contributors
 
-Thanks to our many contributors and friends those give time to add tricks.
+Thanks to our many contributors and friends who give time to add tricks.
 
 <br/>
 
