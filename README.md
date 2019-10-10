@@ -64,7 +64,7 @@ Adding tricks is a big contribution to the open-source community. The website an
 
 ## 💜 Thanks to Our Contributors
 
-Thanks to our many contributors and friends who give time to add tricks.
+Thanks to our many contributors and friends who give their time to add tricks.
 
 <br/>
 
