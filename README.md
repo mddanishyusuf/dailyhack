@@ -11,7 +11,7 @@
   💡 :rocket:
 </h3>
 <p align="center">
-  Website: [https://dailyhack.xyz](https://dailyhack.xyz)
+  Website: <a href="https://dailyhack.xyz">https://dailyhack.xyz</a>
 </p>
 <p align="center">
   It's a place where people share the daily hacks they use during development to make their life easy.<br/>So, Do you have any hack to submit?
