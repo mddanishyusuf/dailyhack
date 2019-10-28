@@ -182,10 +182,25 @@ const HackCard = (props) => {
                         display: inline-block;
                         padding: 0px 5px;
                     }
-                    
-                    .any-comments a, .any-comments span{
-                        padding-right: 5px;
+                    .any-comments a:first-child {
+                        background: #e2e2e2;
+                        padding: 5px;
+                        border-radius: 5px;
+                        margin-right: 5px;
                     }
+
+                    .any-comments a span {
+                        line-height: 18px;
+                        vertical-align: middle;
+                        padding-left: 5px;
+                        padding-right: 0;
+                    }
+
+                    .any-comments a, .any-comments span{
+                        line-height: 18px;
+                        display: flex;
+                    }
+                    
 
                     @media screen and (min-width: 700px){
                         .hack-card-container .hack-card {
