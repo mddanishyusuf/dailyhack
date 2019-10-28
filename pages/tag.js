@@ -54,6 +54,7 @@ function DailyTagPage(props){
     return(
         <Fragment>
             <Layout title={`DailyHack: ${props.tag_name} tricks`} description="An community of makers, developers and geeks where they share there daily hack they use in their developments." image="/static/images/daily-hack-image.png" pageUrl="https://dailyhack.xyz" {...props}>
+                <h1>Tag: ${props.tag_name} tricks</h1>
                 <HackComponent issues={issues} {...props}/>
                 <div className="load-more-issues">
                     {loadingCount
