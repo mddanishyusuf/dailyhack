@@ -18,9 +18,11 @@ function ContributorCard(props) {
                             <div className="picture">
                                 <img src={cont.user.avatar_url}/>
                             </div>
-                            <div className="name">{cont.user.login}</div>
-                            <div className="tricks-count">{cont.issues.length} {cont.issues.length === 1 ? 'trick' : 'tricks'}</div>
-                            <div className="profile-url"><a href={`https://github.com/${cont.user.login}`} target="_blank">{`https://github.com/${cont.user.login}`}</a></div>
+                            <div className="user-info">
+                                <div className="name">{cont.user.login}</div>
+                                <div className="tricks-count">{cont.issues.length} {cont.issues.length === 1 ? 'trick' : 'tricks'}</div>
+                                <div className="profile-url"><a href={`https://github.com/${cont.user.login}`} target="_blank">{`https://github.com/${cont.user.login}`}</a></div>
+                            </div>
                         </div>
                     </div>
                 ))}
@@ -73,12 +75,31 @@ function ContributorCard(props) {
                         margin-bottom: 40px;
                     }
 
+                    .user-meta {
+                        display: flex;
+                        vertical-align: middle;
+                        align-items: center;
+                    }
+
                     .user-meta .picture img {
                         width: 100px;
                         height: 100px;
                         border-radius:  52% 55% 77% 67% / 54% 84% 41% 72%;
                         border: 3px solid #4618B1
                     }
+
+                    .user-info {
+                        padding-left: 10px;
+                    }
+
+                    .user-info div {
+                        padding: 3px 0;
+                    }
+
+                    .user-info .name {
+                        font-weight: 600;
+                    }
+
                 `}
             </style>
         </div>
