@@ -11,7 +11,7 @@
   💡 :rocket:
 </h3>
 <p align="center">
-  Website: <a href="https://dailyhack.xyz">https://dailyhack.xyz</a>
+  Website: <a href="https://dailyhack.now.sh/">https://dailyhack.now.sh/</a>
 </p>
 <p align="center">
   It's a place where people share the daily hacks they use during development to make their life easy.<br/>So, Do you have any hack to submit?
@@ -22,14 +22,13 @@
   </a>
 </p>
 
-
 ## What’s In This Document
 
-- [About DailyHack](#-about-dailyhack)
-- [How to Add tricks](#-how-to-add-tricks)
-- [How to Contribute](#-how-to-contribute)
-- [Thanks to Our Contributors](#-thanks-to-our-contributors)
-- [License](#license)
+-   [About DailyHack](#-about-dailyhack)
+-   [How to Add tricks](#-how-to-add-tricks)
+-   [How to Contribute](#-how-to-contribute)
+-   [Thanks to Our Contributors](#-thanks-to-our-contributors)
+-   [License](#license)
 
 <br/>
 
@@ -55,10 +54,10 @@ Adding tricks is a big contribution to the open-source community. The website an
 
 ### Website Build With
 
-- **Next.js**- For SSR, Front-end I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
-- **GitHub Issues:** As a CMS for tricks
-- **Glitch:** A layer on the GitHub API to secure access_token
-- **Zeit:** To host the application
+-   **Next.js**- For SSR, Front-end I use [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx).
+-   **GitHub Issues:** As a CMS for tricks
+-   **Glitch:** A layer on the GitHub API to secure access_token
+-   **Zeit:** To host the application
 
 <br/>
 
