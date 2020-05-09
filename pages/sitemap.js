@@ -3,6 +3,7 @@ import fetch from 'isomorphic-unfetch';
 import {withRouter} from 'next/router';
 import getSlug from 'speakingurl'
 import Link from 'next/link';
+import {DAILYHACK_GITHUB_API} from '../config/global'
 
 import Layout from '../components/Layout';
 
@@ -43,7 +44,7 @@ function DailyHackHome(props){
 
 DailyHackHome.getInitialProps = async function(context){
 
-    const url = process.env.DAILYHACK_GITHUB_API + '/issues/1/100'
+    const url = DAILYHACK_GITHUB_API + '/issues/1/100'
     const result = await fetch(url)
     const data = await result.json()
     return {

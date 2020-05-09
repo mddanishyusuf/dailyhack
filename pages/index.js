@@ -5,7 +5,7 @@ import {withRouter} from 'next/router';
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import PaginationBox from '../components/PaginationBox';
-import {PER_PAGE} from '../config/global'
+import {PER_PAGE, GLITCH_ENDPOINT} from '../config/global'
 
 const HackComponent = withRouter(props=>{
     return (
@@ -48,7 +48,7 @@ DailyHackHome.getInitialProps = async function(context){
     }else{
         page_number = context.query.page_number
     }
-    const url = process.env.DAILYHACK_GITHUB_API + '/issues/' + page_number + '/' + PER_PAGE
+    const url = GLITCH_ENDPOINT + '/issues/' + page_number + '/' + PER_PAGE
     const result = await fetch(url)
     const data = await result.json()
     return {

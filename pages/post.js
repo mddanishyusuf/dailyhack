@@ -4,6 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
 import HackCard from '../components/HackCard';
 import CommentBox from '../components/CommentBox'
+import {GLITCH_ENDPOINT} from '../config/global'
 
 const SinglePost = withRouter(props => {
     return(
@@ -30,7 +31,7 @@ const SinglePost = withRouter(props => {
 })
 
 SinglePost.getInitialProps = async function(context){
-    const result = await fetch(`${process.env.DAILYHACK_GITHUB_API}/issues/${context.query.number}`)
+    const result = await fetch(`${GLITCH_ENDPOINT}/issues/${context.query.number}`)
     const issue = await result.json()
     return {
         single_issue: issue,

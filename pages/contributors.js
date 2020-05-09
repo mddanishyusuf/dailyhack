@@ -1,6 +1,7 @@
 import {Fragment} from 'react';
 import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
+import { GLITCH_ENDPOINT} from '../config/global'
 
 function ContributorCard(props) {
     return (
@@ -117,7 +118,7 @@ function Contributors(props){
 }
 
 Contributors.getInitialProps = async function(){
-    const url = process.env.DAILYHACK_GITHUB_API + '/contributors'
+    const url = GLITCH_ENDPOINT + '/contributors'
     const result = await fetch(url)
     const data = await result.json()
 
