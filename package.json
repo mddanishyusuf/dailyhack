@@ -19,7 +19,7 @@
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "isomorphic-unfetch": "^3.0.0",
-    "markdown-to-jsx": "^6.9.3",
+    "markdown-to-jsx": "^6.11.4",
     "moment": "^2.24.0",
     "next": "^9.3.2",
     "next-router-events": "^2.1.0",
