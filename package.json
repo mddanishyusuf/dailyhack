@@ -21,7 +21,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.9.3",
     "moment": "^2.24.0",
-    "next": "^9.3.2",
+    "next": "^11.1.0",
     "next-router-events": "^2.1.0",
     "node-sass": "^4.11.0",
     "now": "^14.2.3",
