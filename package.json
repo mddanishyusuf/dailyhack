@@ -20,7 +20,7 @@
     "fs": "0.0.1-security",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.9.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "^9.3.2",
     "next-router-events": "^2.1.0",
     "node-sass": "^4.11.0",
