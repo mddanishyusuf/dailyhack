@@ -115,6 +115,8 @@ const HackCard = (props) => {
 
                     .post-body img {
                         max-height: 250px;
+                        max-width: 100%;
+                        width: auto;
                     }
 
                     .post-body p code, .post-body ol li code {
