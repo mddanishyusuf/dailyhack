@@ -23,7 +23,7 @@
     "moment": "^2.24.0",
     "next": "^9.3.2",
     "next-router-events": "^2.1.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "now": "^14.2.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
